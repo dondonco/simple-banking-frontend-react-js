@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 
 const AccountRow = ({ account }) => {
   console.log(account);
@@ -8,6 +9,11 @@ const AccountRow = ({ account }) => {
       <td>{account.name}</td>
       <td>{account.acctNumber}</td>
       <td>{account.balance}</td>
+      <td className="d-flex justify-content-center">
+        <Button text={"Withdraw"} />
+
+        <Button text={"Deposit"} />
+      </td>
     </tr>
   );
 };

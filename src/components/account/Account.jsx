@@ -1,5 +1,6 @@
 import React from "react";
 import AccountRow from "./AccountRow";
+import "./Account";
 
 function Account() {
   const accountList = [
@@ -105,7 +106,7 @@ function Account() {
   ];
   console.log(accountList);
   return (
-    <div>
+    <div className="container">
       <table className="table table-striped">
         <thead className="thead-dark">
           <tr>
@@ -113,6 +114,7 @@ function Account() {
             <th scope="col">name</th>
             <th scope="col">acctNumber</th>
             <th scope="col">balance</th>
+            <th scope="col">transaction</th>
           </tr>
         </thead>
         <tbody>
