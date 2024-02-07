@@ -4,7 +4,7 @@ const AccountRow = ({ account }) => {
   console.log(account);
   return (
     <tr>
-      <td>{account.id}</td>
+      <th scope="row">{account.id}</th>
       <td>{account.name}</td>
       <td>{account.acctNumber}</td>
       <td>{account.balance}</td>

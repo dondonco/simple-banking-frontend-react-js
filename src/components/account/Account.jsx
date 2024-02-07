@@ -106,13 +106,13 @@ function Account() {
   console.log(accountList);
   return (
     <div>
-      <table>
-        <thead>
+      <table className="table table-striped">
+        <thead className="thead-dark">
           <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>acctNumber</th>
-            <th>balance</th>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">acctNumber</th>
+            <th scope="col">balance</th>
           </tr>
         </thead>
         <tbody>
