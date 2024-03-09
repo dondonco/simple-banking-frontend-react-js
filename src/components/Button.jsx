@@ -1,7 +1,16 @@
 import React from "react";
 
-function Button({ text }) {
-  return <div className="btn btn-primary m-2">{text}</div>;
+function Button({ id, text, eventHandler, btnStyle }) {
+  const handler = () => {
+    eventHandler(id);
+  };
+  return (
+    <div>
+      <button className={btnStyle} onClick={handler}>
+        {text}
+      </button>
+    </div>
+  );
 }
 
 export default Button;
