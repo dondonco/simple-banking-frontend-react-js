@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import AccountRow from "./AccountRow";
+import AddAccount from "./AddAccount";
 import "./Account";
 
 function Account() {
@@ -105,24 +106,27 @@ function Account() {
     },
   ];
   console.log(accountList);
+
   return (
-    <div className="container">
-      <table className="table table-striped">
-        <thead className="thead-dark">
+    <div className="table-responsive">
+      <table className="table table-striped align-middle table-bordered">
+        <thead className="table-dark">
           <tr>
             <th scope="col">id</th>
             <th scope="col">name</th>
             <th scope="col">acctNumber</th>
             <th scope="col">balance</th>
             <th scope="col">transaction</th>
+            <th scope="col">account</th>
           </tr>
         </thead>
         <tbody>
           {accountList.map((account) => (
-            <AccountRow account={account} />
+            <AccountRow account={account} key={account.id} />
           ))}
         </tbody>
       </table>
+      <AddAccount />
     </div>
   );
 }
