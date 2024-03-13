@@ -3,11 +3,12 @@ import Button from "../Button";
 import AddAccountModal from "./AddAccountModal";
 import AddAccountForm from "./AddAccountForm";
 
-function AddAccount() {
+function AddAccount({ handlerAddAccount }) {
   const [account, setAccount] = useState({ name: "", type: "regular" });
 
   const saveAccount = () => {
     console.log(account);
+    handlerAddAccount(account);
     console.log("Save account");
   };
 

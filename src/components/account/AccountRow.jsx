@@ -18,24 +18,9 @@ const AccountRow = ({ account }) => {
   };
   return (
     <tr>
-      <th scope="row">{account.id}</th>
-      <td>{account.name}</td>
+      <td>{account.type}</td>
       <td>{account.acctNumber}</td>
-      <td className="d-flex justify-content-center">
-        <Button
-          id={account.id}
-          btnStyle={"btn btn-warning m-1"}
-          text={"Update"}
-          eventHandler={handlerUpdateAccount}
-        />
-        <Button
-          id={account.id}
-          btnStyle={"btn btn-danger m-1"}
-          text={"Delete"}
-          eventHandler={handlerDeleteAccount}
-        />
-      </td>
-      <td>{account.balance}</td>
+      <td>{account.name}</td>
       <td className="d-flex justify-content-center">
         <Button
           id={account.id}
@@ -48,6 +33,21 @@ const AccountRow = ({ account }) => {
           btnStyle={"btn btn-success m-1"}
           text={"Deposit"}
           eventHandler={handlerDeposit}
+        />
+      </td>
+      <td>{account.balance}</td>
+      <td className="d-flex justify-content-center">
+        <Button
+          id={account.id}
+          btnStyle={"btn btn-warning m-1"}
+          text={"Update"}
+          eventHandler={handlerUpdateAccount}
+        />
+        <Button
+          id={account.id}
+          btnStyle={"btn btn-danger m-1"}
+          text={"Delete"}
+          eventHandler={handlerDeleteAccount}
         />
       </td>
     </tr>

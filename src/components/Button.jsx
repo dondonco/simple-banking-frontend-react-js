@@ -5,10 +5,8 @@ function Button({ id, text, eventHandler, btnStyle }) {
     eventHandler(id);
   };
   return (
-    <div>
-      <button className={btnStyle} onClick={handler}>
-        {text}
-      </button>
+    <div className={btnStyle} onClick={handler}>
+      {text}
     </div>
   );
 }
