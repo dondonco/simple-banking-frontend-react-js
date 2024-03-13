@@ -105,28 +105,34 @@ function Account() {
       interestCharge: 0.0,
     },
   ];
-  console.log(accountList);
+  const [accounts, setAccounts] = useState([...accountList]);
+  const handlerAddAccount = (account) => {
+    setAccounts([...accounts, account]);
+    console.log("Added account successfully");
+    console.log(accounts);
+  };
+  console.log(accounts);
 
   return (
     <div className="table-responsive">
       <table className="table table-striped align-middle table-bordered">
         <thead className="table-dark">
           <tr>
-            <th scope="col">id</th>
-            <th scope="col">name</th>
+            <th scope="col">type</th>
             <th scope="col">acctNumber</th>
-            <th scope="col">balance</th>
+            <th scope="col">name</th>
             <th scope="col">transaction</th>
+            <th scope="col">balance</th>
             <th scope="col">account</th>
           </tr>
         </thead>
         <tbody>
-          {accountList.map((account) => (
+          {accounts.map((account) => (
             <AccountRow account={account} key={account.id} />
           ))}
         </tbody>
       </table>
-      <AddAccount />
+      <AddAccount handlerAddAccount={handlerAddAccount} />
     </div>
   );
 }
